@@ -1,0 +1,9 @@
+Task
+
+import sys
+
+max_int = sys.maxsize
+print("Maximum number in integers", max_int)
+
+max_float = sys.float_info.max
+print("Maximum number in decimal places", max_float)
