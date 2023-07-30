@@ -4,6 +4,10 @@ import sys
 
 max_int = sys.maxsize
 print("Maximum number in integers", max_int)
+print("The sum of two greatest integers is", max_int + max_int)
+# When adding two maximum integers, it gives us another larger number
 
 max_float = sys.float_info.max
 print("Maximum number in decimal places", max_float)
+print("The sum of two greatest decimal numbers is", max_float + max_float)
+# But adding two maximum decimal numbers gives us infinity
