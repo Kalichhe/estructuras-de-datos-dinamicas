@@ -1,41 +1,55 @@
+
+// ----------------------------------------------------------------
+// Para poder ejecutar los ejercicios, solo hay que borrar /* */ o //.
+// Los ejercicios estan debajo de los titulos y estan enumerados
+// ----------------------------------------------------------------
+
 public class Main {
     public static void main(String[] args){
-        // Pruebas para el multiplo
+        // ----------------------------------------------------------------
+        // 1) Pruebas para el multiplo
+        // ----------------------------------------------------------------
         // System.out.println("La cantidad de dígitos que son multiplos de 2 y 4 son: " + Digit(44,0));
 
-        // Pruebas para el invertir
+        // ----------------------------------------------------------------
+        // 2) Pruebas para el invertir
+        // ----------------------------------------------------------------
+        //System.out.println(Invert("Palabra-a-invertir"));
 
-        /*System.out.println(Invert("Hola"));
-        System.out.println(Invert("ay muchachos!"));
-        System.out.println(Invert("Carlos"));
-        System.out.println(Invert("Estructuras"));
-        System.out.println(Invert(""));*/
-
-        // Pruebas para la sumatoria
+        // ----------------------------------------------------------------
+        // 3) Pruebas para la sumatoria
+        // ----------------------------------------------------------------
         /*int [][] matrix = {
-                {1,2,3},{4,5,6},{7,8,9}
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
         };
         int [][] matrix2 = {
-                {1,2,3,4},{1,2,3,4},{5,6,7,8},{1,1,1,1}
+                {1,2,3,4},
+                {4,3,2,1},
+                {5,6,7,8},
+                {9,8,7,6}
         };
         System.out.println(SumMatrix(matrix2, 0, 0, 0));*/
 
-        // Pruebas para encontrar
-        /*String [] prueba = {"a", "b", "c", "d", "e", "f"};
-        int [] prueba2 = {1, 2, 3};
+        // ----------------------------------------------------------------
+        // 4) Pruebas para encontrar
+        // ----------------------------------------------------------------
+        /*String [] pruebaString = {"a", "b", "c", "d", "e", "f"};
+        int [] pruebaNumber = {1, 2, 3};
 
-        System.out.println("El elemento string fue encontrado? " + elemtentString(prueba,"a",0));
-        System.out.println("El elemento number fue encontrado? " + elementNumber(prueba2,0, 0));*/
+        System.out.println("El elemento string fue encontrado? " + elemtentString(pruebaString,"a",0));
+        System.out.println("El elemento number fue encontrado? " + elementNumber(pruebaNumber,0, 0));*/
 
-        // Pruebas para alfanumerico
-
-        /*System.out.println(extractNumber("a1b2c3",0,""));
-        System.out.println(extractNumber("0j0j0j0j",0,""));
-        System.out.println(extractNumber("1111",0,""));
-        System.out.println(extractNumber("k6k79090",0,""));*/
-
-
+        // ----------------------------------------------------------------
+        // 5) Pruebas para alfanumerico
+        // ----------------------------------------------------------------
+        /*System.out.println(extractNumber("C1a2r3l4o5s6",0,""));
+        System.out.println(extractNumber("M0a9r8i7o6",0,""));
+        System.out.println(extractNumber("L9o9p8e8z7",0,""));
+        System.out.println(extractNumber("P1e2s3t1a2n3a4",0,""));*/
     }
+
     // ----------------------------------------------------------------
     // Aquí estan todos los ejercicios del taller.
 
