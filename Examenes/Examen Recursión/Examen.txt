@@ -1,0 +1,39 @@
+// Primero: Dado un número n, necesitamos imprimir todos los números binarios de n dígitos con la misma suma en las mitades izquierda y derecha. Si n es impar, entonces el elemento medio puede ser 0 o 1.
+
+Procedimiento main()
+    Entero n = 4
+    GenerarBinariosBalanceados(n)
+FinProcedimiento
+
+Procedimiento GenerarBinariosBalanceados(Entero n)
+    Arreglo de Entero binarioNumero[n]
+    GenerarBinariosBalanceadosUtil(binarioNumero, n, 0)
+FinProcedimiento
+
+Procedimiento GenerarBinariosBalanceadosUtil(Arreglo de Entero binarioNumero, Entero n, Entero index)
+    Si index = n Entonces
+        Arreglo de Entero mitadIzquierda = CopiarRango(binarioNumero, 0, n / 2)
+        Arreglo de Entero mitadDerecha = CopiarRango(binarioNumero, n / 2, n)
+        
+        Si SumarArreglo(mitadIzquierda) = SumarArreglo(mitadDerecha) Entonces
+            Para cada digito en binarioNumero
+                Imprimir(digito)
+            FinPara
+            ImprimirNuevaLinea()
+        FinSi
+    Sino
+        binarioNumero[index] = 0
+        GenerarBinariosBalanceadosUtil(binarioNumero, n, index + 1)
+
+        binarioNumero[index] = 1
+        GenerarBinariosBalanceadosUtil(binarioNumero, n, index + 1)
+    FinSi
+FinProcedimiento
+
+Función SumarArreglo(Arreglo de Entero arr) -> Entero
+    Entero suma = 0
+    Para cada número en arr
+        suma = suma + número
+    FinPara
+    Devolver suma
+FinFunción
