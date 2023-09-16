@@ -1,5 +1,3 @@
-package org.example;
-
 public class QueueInteger {
     NodoInteger first;
     NodoInteger last;
@@ -28,6 +26,14 @@ public class QueueInteger {
             last = null;
         }
         return value;
+    }
+
+    public void printQueue() {
+        NodoInteger current = first;
+        while (current != null) {
+            System.out.println(current.value);
+            current = current.next;
+        }
     }
 
     public boolean isEmpty() {
