@@ -1,10 +1,4 @@
-package org.example;
-
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Main {
-    private static Queue<Integer> queue = new LinkedList<>();
     public static void main(String[] args) {
         //initializationLinkedList();
         //initializationStack();
@@ -13,21 +7,23 @@ public class Main {
         // invertQueueIntegerWithOnlyQueue();
 
         // Desde aquí me toca llamar y pasar los parametros
-        queue.add(1);
-        queue.add(2);
-        queue.add(3);
-        queue.add(4);
-        
-        System.out.println("Cola original:");
-        printQueue();
-    
-        System.out.println("Invertir cola:");
-        invertQueueIntegerWithOnlyQueue();
-    
-        System.out.println("Cola invertida:");
-        printQueue();
-    }
+        QueueInteger queueInteger = new QueueInteger();
 
+        // Llenar la cola con elementos
+        queueInteger.enqueue(1);
+        queueInteger.enqueue(2);
+        queueInteger.enqueue(3);
+
+        System.out.println("Cola original:");
+        queueInteger.printQueue();
+
+        System.out.println("Invertir cola:");
+
+        invertQueueIntegerWithOnlyQueue(queueInteger);
+
+        System.out.println("Cola invertida:");
+        queueInteger.printQueue();
+    }
     private static void  initializationLinkedList(){
         //Create linkedlist of integers
         NodoInteger ni1 = new NodoInteger();
@@ -86,7 +82,6 @@ public class Main {
             ns = ns.next;
         }
     }
-
     private static void initializationStack(){
         //Create stack of integers
         StackInteger si1 = new StackInteger();
@@ -125,7 +120,6 @@ public class Main {
         }
 
     }
-
     private static void initializationQueue(){
         //Create queue of integers
         QueueInteger qi1 = new QueueInteger();
@@ -136,8 +130,8 @@ public class Main {
         qc1.enqueue('a');
 
         //Create queue of strings
-        QueueString qs1 = new QueueString();
-        qs1.enqueue("Hello");
+        Queuestring queuestring = new Queuestring();
+        queuestring.enqueue("Hello");
 
         qi1.enqueue(2);
         qi1.enqueue(3);
@@ -145,8 +139,8 @@ public class Main {
         qc1.enqueue('b');
         qc1.enqueue('c');
 
-        qs1.enqueue("World");
-        qs1.enqueue("!");
+        queuestring.enqueue("World");
+        queuestring.enqueue("!");
 
         //Print integers
         while (!qi1.isEmpty()) {
@@ -159,11 +153,10 @@ public class Main {
         }
 
         //Print strings
-        while (!qs1.isEmpty()) {
-            System.out.println(qs1.dequeue());
+        while (!queuestring.isEmpty()) {
+            System.out.println(queuestring.dequeue());
         }
     }
-
     private static void invertStackIntegerWithOnlyStack(){
         StackInteger si1 = new StackInteger();
         si1.push(1);
@@ -179,25 +172,15 @@ public class Main {
             System.out.println(si2.pop());
         }
     }
-
     // Desde aquí estan los cambias
-    public static void invertQueueIntegerWithOnlyQueue() {
-        
-        if (queue.isEmpty() || queue.size() == 1) {
+    public static void invertQueueIntegerWithOnlyQueue(QueueInteger queue) {
+        if (queue.isEmpty()) {
             return;
         }
 
-        int item = queue.remove();
-        invertQueueIntegerWithOnlyQueue();
-        queue.add(item);
+        int item = queue.dequeue();
+        invertQueueIntegerWithOnlyQueue(queue);
+        queue.enqueue(item);
     }
-
-    // Ahí hay un for, para poder imprimir los números cada vez que se desencole y encole
-    public static void printQueue() {
-        for (int item : queue) {
-            System.out.println(item);
-        }
-    }
-
-    
 }
+
